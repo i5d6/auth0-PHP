@@ -1,0 +1,169 @@
+:root {
+  color-scheme: light;
+  --bg: #f6f7fb;
+  --card: #ffffff;
+  --text: #121826;
+  --muted: #55607a;
+  --primary: #2d5bff;
+  --primary-dark: #2448c9;
+  --border: #e4e7ef;
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+.shell {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 40px 20px 64px;
+  display: grid;
+  gap: 24px;
+}
+
+.hero {
+  display: grid;
+  gap: 12px;
+}
+
+.hero.small {
+  gap: 8px;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  color: var(--muted);
+}
+
+h1 {
+  font-size: clamp(28px, 4vw, 40px);
+}
+
+h2 {
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+
+.lead {
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 24px;
+  display: grid;
+  gap: 16px;
+  box-shadow: 0 12px 24px rgba(18, 24, 38, 0.08);
+}
+
+label {
+  font-weight: 600;
+}
+
+input {
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  padding: 12px 14px;
+  font-size: 15px;
+}
+
+button {
+  border: none;
+  border-radius: 10px;
+  padding: 12px 18px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button.primary {
+  background: var(--primary);
+  color: #ffffff;
+}
+
+button.primary:hover {
+  background: var(--primary-dark);
+}
+
+button.secondary {
+  background: #e7edff;
+  color: var(--primary);
+}
+
+.consent {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.status {
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.results {
+  border-top: 1px solid var(--border);
+  padding-top: 12px;
+  display: grid;
+  gap: 12px;
+}
+
+.breach {
+  padding: 12px;
+  border-radius: 12px;
+  background: #f1f4ff;
+  border: 1px solid #d7defa;
+}
+
+.breach h3 {
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+
+.breach p {
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.footer {
+  display: flex;
+  gap: 16px;
+}
+
+.footer a {
+  color: var(--primary);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+ul {
+  padding-left: 20px;
+  color: var(--muted);
+  display: grid;
+  gap: 6px;
+}
+
+@media (max-width: 640px) {
+  .shell {
+    padding: 28px 16px 48px;
+  }
+
+  .card {
+    padding: 18px;
+  }
+}
